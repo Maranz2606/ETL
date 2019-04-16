@@ -7,7 +7,7 @@ class Rulecf extends Ruleset
     {        
         
         foreach ($this->dataset->getData() as $data ){
-            if (strlen($data)==16){
+            if (strlen($data->value)==16){
                return "c'è un codice fiscale";
             }
         }

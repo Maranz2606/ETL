@@ -26,9 +26,18 @@ class Data implements Dataset
         }
         
         
+        
         foreach ($cellIterator as $cell) {
-            array_push($this->data, $cell->getValue());
+            
+            $obj = new \stdClass();
+            $obj->value = $cell->getValue();
+            json_encode($obj);
+            array_push($this->data, $obj);
+           
         }
+        
+        
+        
         
        
         
