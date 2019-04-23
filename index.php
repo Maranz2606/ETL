@@ -12,10 +12,13 @@ $data = new Data();
 
 $data->setData("test.xlsx");
 
-print_r( $data->getData());
+var_dump( $data->getHeader());
+var_dump( $data->getData());
+
 $rulecf = new Rulecf($data);
 $rulemail =  new Rulemail($data);
 echo $rulecf->getData(); 
 echo $rulemail->getData();
+
 
 ?>
