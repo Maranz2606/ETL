@@ -5,9 +5,6 @@ require_once("./Rulecf.php");
 require_once("./Rulemail.php");
 require_once("./Ruleempty.php");
 
-// foreach(glob("path/to/my/dir/*.php") as $file){
-//     require $file;
-// }
 
 $data = new Data();
 
