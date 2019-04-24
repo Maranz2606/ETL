@@ -7,7 +7,7 @@ class Rulemail extends Ruleset
     {
         foreach ($this->dataset->getData() as $data) {
             if (filter_var($data->value,FILTER_VALIDATE_EMAIL)) {
-                return "l'email inserita è corretta";
+                return "l'email inserita Ã¨ corretta";
             }
         }
     }
