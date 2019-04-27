@@ -4,21 +4,15 @@ class Ruleempty extends Ruleset
 {
     function getData()
     {
-        foreach ($this->dataset->getData() as $data){
-            if (is_null($data->value)){
-                echo "c'è un campo vuoto alla casella" .$data->coor;
+        foreach ($this->dataset->getData() as $data) {
+            
+                if (is_null($data->value)) {
+                    echo "il campo " . $data->field . " alla cella " . $data->coor . " è vuoto <br>";
+                
             }
-        }    
+        }
     }
 
     function setData(string $file)
-    {
-
-    }
-
-    
-
+    { }
 }
-
-
-?>

@@ -16,9 +16,9 @@ var_dump( $data->getData());
 $rulecf = new Rulecf($data);
 $rulemail =  new Rulemail($data);
 $ruleemprty = new Ruleempty($data);
-echo $ruleemprty->getData();
-echo $rulecf->getData(); 
-echo $rulemail->getData();
+$ruleemprty->getData();
+ $rulecf->getData(); 
+ $rulemail->getData();
 
 
 ?>
