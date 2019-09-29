@@ -5,7 +5,7 @@ require_once("./Rulecf.php");
 require_once("./Rulemail.php");
 require_once("./Ruleempty.php");
 require_once("./Rulecity.php");
-
+require_once("./Rulenation.php");
 
 $data = new Data();
 
@@ -18,10 +18,12 @@ $rulecf = new Rulecf($data);
 $rulemail =  new Rulemail($data);
 $ruleemprty = new Ruleempty($data);
 $rulecity = new Rulecity($data);
+$reulenation = New Rulenation($data);
 $ruleemprty->getData();
  $rulecf->getData(); 
  $rulemail->getData();
  $rulecity-> getData();
+ $reulenation-> getData();
 
 
 ?>
