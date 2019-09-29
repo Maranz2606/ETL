@@ -5,16 +5,17 @@ class Rulecity extends Ruleset
     function getData()
     {
 
-        $file = file_get_contents("nations.js");
+        $file = json_decode(file_get_contents("nations.json"));
+       $cityArray =  array_column($file->locationCity, 'name');
         foreach ($this->dataset->getData() as $data) {
             
-                if ($data->field == "nazione" 
-                && strpos($file, $data->value) == false) {
-                    echo "il campo " . $data->field . " alla cella " . $data->coor . " contiene una nazione non presente nel database";
-                
-            }
+                if ($data->field == "città"   && array_search($data->value,$cityArray)== false){
+                    echo "il campo " . $data->field . " alla cella " . $data->coor . " contiene una città non presente nel database";
+                }
+            
         }
     }
+
 
     function setData(string $file)
     { }
