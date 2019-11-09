@@ -15,6 +15,8 @@ if (move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $target_file)) {
 }
 
 //print_r($_FILES);
+header("Location: ./SelectRule.html");
+
 
 
 ?>

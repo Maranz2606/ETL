@@ -1,6 +1,6 @@
 <?php
-require 'C:/Users/Maranz/vendor/autoload.php';  //TABLET
-//require 'C:/Users/fisso/vendor/autoload.php';  //PC FISSO
+require 'C:/Users/'.get_current_user().'/vendor/autoload.php';  
+
 require_once './Dataset.php';
 
 class Data implements Dataset

@@ -1,11 +1,15 @@
 <?php
 
+foreach(glob("./*.php") as $file){
+    require_once $file;
+}
+/*
 require_once("./Data.php");
 require_once("./Rulecf.php");
 require_once("./Rulemail.php");
 require_once("./Ruleempty.php");
 require_once("./Rulecity.php");
-
+*/
 
 $data = new Data();
 
