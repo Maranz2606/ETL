@@ -2,7 +2,7 @@
 require_once './Ruleset.php';
 class Ruleempty extends Ruleset
 {
-    function getData()
+    function executeCheck()
     {
         foreach ($this->dataset->getData() as $data) {
             
@@ -13,6 +13,7 @@ class Ruleempty extends Ruleset
         }
     }
 
-    function setData(string $file)
-    { }
+    function setData(string $file){}
+    function getData(){}
+
 }
