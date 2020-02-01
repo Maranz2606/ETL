@@ -12,8 +12,8 @@ $data->setData("./../endpoint/uploads/". $fileName);
 var_dump( $data->getHeader());
 var_dump( $data->getData());
 
-foreach($ruleList as $rule){
-    $rulecf = new $rule($data);
-    $rulecf->executeCheck(); 
+foreach($ruleList as $ruleSelected){
+    $rule = new $ruleSelected($data);
+    $rule->executeCheck(); 
 }
 ?>
