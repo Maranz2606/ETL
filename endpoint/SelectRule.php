@@ -1,3 +1,10 @@
+<?php
+include("FileHandler.php");
+session_start();
+$_SESSION["fileHandler"] = new FileHandler($_FILES["fileToUpload"]);
+$_SESSION["fileHandler"]->checkExtension();
+$_SESSION["fileHandler"]->uploadFile();
+?>
 <html>
     <head>
         <title>
