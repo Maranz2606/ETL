@@ -2,7 +2,7 @@
 require_once './Ruleset.php';
 class Rulenation extends Ruleset
 {
-    function getData()
+    function executeCheck()
     {
 
         $file = json_decode(file_get_contents("nations.json"));
@@ -10,13 +10,13 @@ class Rulenation extends Ruleset
         foreach ($this->dataset->getData() as $data) {
             
                 if ($data->field == "città"   && array_search($data->value,$nationsArray)== false){
-                    echo "il campo " . $data->field . " alla cella " . $data->coor . " contiene una nazione non presente nel database";
+                    echo "il campo " . $data->field . " alla cella " . $data->coor . " contiene una nazione non presente nel database<br>";
                 }
             
         }
     }
 
 
-    function setData(string $file)
-    { }
+    function setData(string $file) {}
+    function getData(){}
 }
