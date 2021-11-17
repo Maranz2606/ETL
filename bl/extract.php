@@ -1,20 +1,25 @@
 <?php
-include("./../endpoint/FileHandler.php");
-session_start();
+
 foreach(glob("./*.php") as $file){
     require_once $file;
 }
 $data = new Data();
-$file_name = $_SESSION["fileHandler"]->getFileName();
-$rule_list = isset($_POST['rule']) ? $_POST['rule'] : array();
 
-$data->setData("./../endpoint/uploads/". $file_name);
+$data->setData("./../endpoint/uploads/test.xlsx");
 
 var_dump( $data->getHeader());
 var_dump( $data->getData());
 
-foreach($rule_list as $rule){
-    $rule_cf = new $rule($data);
-    $rule_cf->executeCheck(); 
-}
+$rulecf = new Rulecf($data);
+$rulemail =  new Rulemail($data);
+$ruleemprty = new Ruleempty($data);
+$rulecity = new Rulecity($data);
+$reulenation = New Rulenation($data);
+$ruleemprty->getData();
+ $rulecf->getData(); 
+ $rulemail->getData();
+ $rulecity-> getData();
+ $reulenation-> getData();
+
+
 ?>
